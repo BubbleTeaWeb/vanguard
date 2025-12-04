@@ -216,7 +216,7 @@ header {
     z-index: 10;
     background-color: var(--black);
     padding-top: 0.25rem;
-    box-shadow: 0 15px 20px var(--blue);
+    box-shadow: 0 0 50px var(--blue), 0 0 10px var(--blue), 0 0 15px var(--blue);
     margin-bottom: 0.3rem;
 }
 
@@ -301,7 +301,6 @@ header div {
     margin-top: -3.5rem;
 }
 
-/* BUILDS THE MIDDLE LILNE OF THE HAMBURGER */
 label span {
     background-color: white;
     display: block;
@@ -311,7 +310,6 @@ label span {
     width: 2rem;
 }
 
-/* BUILDS THE TOP AND BOTTOM LINES OF THE HAMBURGER*/
 label span:before, label span:after {
     background: white;
     content: '';
@@ -334,25 +332,22 @@ label span:after {
   display:none;
 }
 
-/* ADDS HEIGHT THE NAV WHEN IT'S DROPPED DOWN */
 #nav1 input:checked ~ ul {
     max-height: 500px;
 }
 
-/* MAKES THE MIDDLE LINE OF THE HAMBURGER DISAPPEAR */
 #nav1 input:checked ~ label span {
     background: transparent;
 }
 
-/* ROTATES THE TOP LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
 #nav1 input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
-/* ROTATES THE BOTTOM LINE OF THE HAMBURGER INTO ONE SIDE OF THE X */
+
 #nav1 input:checked ~ label span:after {
     transform: rotate(45deg);
 }
-/* LOCATION OF THE HAMBURGER */
+
 #nav1 input:checked ~ label:not(.steps) span:before, #nav1 input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
